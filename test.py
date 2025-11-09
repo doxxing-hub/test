@@ -436,6 +436,7 @@ def main():
             except urllib.error.HTTPError or json.JSONDecodeError:
                 continue
             except Exception as e:
+                print(f"ERROR: {e}")
                 continue
 
     # Collect Roblox cookies
